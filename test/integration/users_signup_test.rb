@@ -11,7 +11,9 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                          password_confirmation: "bar" } }
     end
     # follow_redirect!
-    assert_template 'users/show'
+    # assert_template 'users/show'
+    # binding.pry
+    # assert is_logged_in?
 
 
     # assert_select 'div#<CSS id for error explanation>'
