@@ -25,7 +25,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     # 2番目のウィンドウでログアウトをクリックするユーザーをシミュレートする
     delete logout_path
 
-    #[follow_redirect!] = POSTリクエストを送信した結果を見て、指定されたリダイレクト先に移動するメソッド
+    # [follow_redirect!] = POSTリクエストを送信した結果を見て、指定されたリダイレクト先に移動するメソッド
     follow_redirect!
     assert_select "a[href=?]", login_path
     assert_select "a[href=?]", logout_path,      count: 0
@@ -38,7 +38,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   end
 
   test "login without remembering" do
-    クッキーを保存してログイン
+    # クッキーを保存してログイン
     log_in_as(@user, remember_me: '1')
     delete logout_path
     # クッキーを削除してログイン

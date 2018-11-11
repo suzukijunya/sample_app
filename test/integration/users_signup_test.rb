@@ -20,7 +20,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     # assert_select 'div.<CSS class for field with error>'
   end
 
-  # test "valid signup information" do
-  #   assert_not flash.empty?
-  # end
+  test "valid signup information" do
+    # assert_not flash.empty?
+  end
 end
